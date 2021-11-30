@@ -1,0 +1,56 @@
+<header>
+  <h2>Hello {{ title }}</h2>
+</header>
+
+<!--<section>
+  <p *ngFor="let client of clients">{{ client.id }} {{ client.name }}</p>
+</section> -->
+
+<section>
+  <h2>New Order</h2>
+
+  <label for="clients">Client</label>
+  <select #client name="clients" (change)="setClient()">
+    <option *ngFor="let client of clients" [value]="client.name">
+      {{ client.name }}
+    </option>
+  </select>
+
+  <hr />
+
+  <label for="products">Product</label>
+  <select #product name="products" (change)="setProduct()">
+    <option *ngFor="let product of products">
+      {{ product.name }}
+    </option>
+  </select>
+
+  <input
+    #quantity
+    type="number"
+    name="quantity"
+    id="quantity"
+    min="0"
+    max="10"
+    [value]="currentProduct.quantity"
+    (change)="setQuantity()"
+  />
+
+  <button
+    [disabled]="currentProduct.quantity < 1 || currentProduct.productId < 1"
+    (click)="addProduct()"
+  >
+    Add product
+  </button>
+</section>
+
+<table>
+  <tbody>
+    <tr *ngFor="let product of selectedProducts">
+      {{
+        product | json
+      }}
+      <!-- <td *ngFor="let value of product | keyvalue">{{ value | json }}</td> -->
+    </tr>
+  </tbody>
+</table>
