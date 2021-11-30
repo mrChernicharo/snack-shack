@@ -47,13 +47,11 @@ export class AppComponent implements OnInit {
     const prodName = this.productSelectRef.nativeElement.value;
     const prodId = this.products.find((prod) => prod.name === prodName)?.id;
     this.currentProduct.productId = Number(prodId);
-    console.log(this.currentProduct);
   }
 
   setQuantity() {
     const quantity = this.quantityInputRef.nativeElement.value;
     this.currentProduct.quantity = Number(quantity);
-    console.log(this.currentProduct);
   }
 
   addProduct() {
@@ -62,7 +60,6 @@ export class AppComponent implements OnInit {
       clientId: this.currentClientId,
     });
     this.resetForm();
-    console.log(this.selectedProducts);
   }
 
   resetForm() {

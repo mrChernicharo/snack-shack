@@ -25,14 +25,14 @@
     </option>
   </select>
 
+  <label for="quantity">Quantity</label>
   <input
     #quantity
     type="number"
     name="quantity"
-    id="quantity"
     min="0"
     max="10"
-    [value]="currentProduct.quantity"
+    [value]="currentProduct.quantity ? currentProduct.quantity : null"
     (change)="setQuantity()"
   />
 
