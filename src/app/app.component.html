@@ -9,3 +9,7 @@
 <app-product-selection></app-product-selection>
 
 <app-clients-display [clients]="service.clients$ | async"></app-clients-display>
+
+<app-products-display
+  [products]="service.products$ | async"
+></app-products-display>

@@ -1,0 +1,13 @@
+<h3>Our Products</h3>
+<table *ngIf="products">
+  <thead>
+    <th *ngFor="let attr of products[0] | keyvalue">{{ attr.key }}</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products">
+      <td>{{ product.id }}</td>
+      <td>{{ product.name }}</td>
+      <td>{{ product.price | currency }}</td>
+    </tr>
+  </tbody>
+</table>

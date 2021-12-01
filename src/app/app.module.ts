@@ -8,6 +8,7 @@ import { ClientAddComponent } from './client-add/client-add.component';
 import { ClientsDisplayComponent } from './clients-display/clients-display.component';
 import { ProductSelectionComponent } from './product-selection/product-selection.component';
 import { ProductAddComponent } from './product-add/product-add.component';
+import { ProductsDisplayComponent } from './products-display/products-display.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { ProductAddComponent } from './product-add/product-add.component';
     ClientsDisplayComponent,
     ProductSelectionComponent,
     ProductAddComponent,
+    ProductsDisplayComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
   providers: [],

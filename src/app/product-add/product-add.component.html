@@ -1,5 +1,9 @@
 <input type="text" [formControl]="productName" placeholder="Product" />
-<input type="number" [formControl]="productPrice" />
+<input
+  type="number"
+  [formControl]="productPrice"
+  [value]="productPrice.value"
+/>
 
 <button
   type="button"
