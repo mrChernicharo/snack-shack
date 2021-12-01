@@ -39,3 +39,13 @@ export function* idGen(type: 'client' | 'product' | 'order') {
     yield ids[type];
   }
 }
+
+export const colors = [
+  'red',
+  'orange',
+  'royalblue',
+  'gold',
+  'violet',
+  'indigo',
+  'green',
+];

@@ -1,0 +1,14 @@
+<input
+  type="text"
+  (keyup.enter)="handleClientAdd()"
+  [formControl]="clientName"
+  placeholder="Client"
+/>
+
+<button
+  type="button"
+  (click)="handleClientAdd()"
+  [disabled]="!clientName.value"
+>
+  Add Client
+</button>
