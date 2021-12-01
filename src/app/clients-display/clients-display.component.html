@@ -1,0 +1,13 @@
+<p>clients-display</p>
+
+<table *ngIf="clients">
+  <thead>
+    <th *ngFor="let attr of clients[0] | keyvalue">{{ attr.key }}</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let client of clients">
+      <td>{{ client.name }}</td>
+      <td>{{ client.id }}</td>
+    </tr>
+  </tbody>
+</table>
