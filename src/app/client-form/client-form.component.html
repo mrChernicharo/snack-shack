@@ -1,7 +1,7 @@
-<p>client-form</p>
+<input
+  type="text"
+  (keyup.enter)="handleClientAdd()"
+  [formControl]="clientName"
+/>
 
-<form>
-  <input type="text" [formControl]="clientName" />
-</form>
-
-<button (click)="handleClientAdd()">Add Client</button>
+<button type="button" (click)="handleClientAdd()">Add Client</button>

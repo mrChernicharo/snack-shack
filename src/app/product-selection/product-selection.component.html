@@ -1,0 +1,5 @@
+<select>
+  <option *ngFor="let product of service.products$ | async">
+    {{ product.name }}
+  </option>
+</select>

@@ -40,4 +40,11 @@ export class AppService {
 
     this.clientsSubj$.next([...this.clientsSubj$.getValue(), { id, name }]);
   }
+
+  addProduct(name: string, price: number) {
+    const id = <number>idGen('product').next().value;
+
+    // prettier-ignore
+    this.productsSubj$.next([...this.productsSubj$.getValue(), { id, name, price }])
+  }
 }
